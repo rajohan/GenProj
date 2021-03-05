@@ -36,9 +36,6 @@ program.action(async (dir) => {
     const fullPath = path.join(process.cwd(), dir);
     const isValid = validateNpmPackageName(packageName);
 
-    // TODO: CssOptimization
-    // https://react-svgr.com/docs/webpack/
-
     if (!isValid.validForNewPackages) {
         return console.error(
             chalk.red(`\nError: "${packageName}" is not a valid package.json name\n`)
